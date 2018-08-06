@@ -363,7 +363,7 @@ public class CssCompressor {
         } while (!(css.equals(oldCss)));
 
         // Replace x.0(px,em,%) with x(px,em,%).
-        css = css.replaceAll("([0-9])\\.0(px|em|%|in|cm|mm|pc|pt|ex|deg|g?rad|k?hz| |;)", "$1$2");
+        css = css.replaceAll("([0-9])\\.0(px|em|%|in|cm|mm|pc|pt|ex|deg|m?s|g?rad|k?hz| |;)", "$1$2");
 
         // Replace 0 0 0 0; with 0.
         css = css.replaceAll(":0 0 0 0(;|})", ":0$1");
